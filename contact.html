@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #CBA795;
+      margin: 0;
+      padding: 0;
+    }
+
+    .contact-container {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 30px;
+      background: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .contact-form label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      resize: vertical;
+    }
+
+    .contact-form button {
+      display: block;
+      width: 100%;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 12px;
+      margin-top: 20px;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .contact-form button:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+  <div class="contact-container">
+    <h1>Contact Us</h1>
+    <form action="#" method="POST" class="contact-form" id="contactForm">
+      <label for="name">Name</label>
+      <p><input type="text" id="name" name="name" value="John Doe" required></p>
+
+      <label for="email">Email</label>
+      <p><input type="email" id="email" name="email" value="john.doe@example.com" required></p>
+
+      <label for="subject">Subject</label>
+      <p><input type="text" id="subject" name="subject" value="Premium and LUXURY available watches" required></p>
+
+      <label for="message">Message</label>
+      <p><textarea id="message" name="message" rows="5" required>We have Cash on delivery and Online payment also required.</textarea></p>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+  <script>
+    // Get the form using DOM
+    const contactForm = document.getElementById("contactForm");
+
+    // Add submit event listener
+    contactForm.addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent actual submission
+      alert("Your message has been sent successfully");
+      // Optional: Reset the form after alert
+      contactForm.reset();
+    });
+  </script>
+</body>
+</html>
